@@ -9,19 +9,27 @@
 /* Begin PBXBuildFile section */
 		6CAD7FBC299509A400712B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD7FBB299509A400712B85 /* AppDelegate.swift */; };
 		6CAD7FBE299509A400712B85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD7FBD299509A400712B85 /* SceneDelegate.swift */; };
-		6CAD7FC0299509A400712B85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD7FBF299509A400712B85 /* ViewController.swift */; };
 		6CAD7FC5299509A500712B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CAD7FC4299509A500712B85 /* Assets.xcassets */; };
 		6CAD7FC8299509A500712B85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CAD7FC6299509A500712B85 /* LaunchScreen.storyboard */; };
+		6CAD7FE729950B8000712B85 /* MainScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD7FE229950B8000712B85 /* MainScreenFactory.swift */; };
+		6CAD7FE829950B8000712B85 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD7FE329950B8000712B85 /* MainScreenViewController.swift */; };
+		6CAD7FE929950B8000712B85 /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD7FE429950B8000712B85 /* MainScreenAssembly.swift */; };
+		6CAD7FEA29950B8000712B85 /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD7FE529950B8000712B85 /* MainScreenInteractor.swift */; };
+		6CAD7FEB29950B8000712B85 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD7FE629950B8000712B85 /* MainScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6CAD7FB8299509A400712B85 /* Surf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Surf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CAD7FBB299509A400712B85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CAD7FBD299509A400712B85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6CAD7FBF299509A400712B85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6CAD7FC4299509A500712B85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CAD7FC7299509A500712B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CAD7FC9299509A500712B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CAD7FE229950B8000712B85 /* MainScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenFactory.swift; sourceTree = "<group>"; };
+		6CAD7FE329950B8000712B85 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		6CAD7FE429950B8000712B85 /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
+		6CAD7FE529950B8000712B85 /* MainScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
+		6CAD7FE629950B8000712B85 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +71,7 @@
 		6CAD7FCF299509CD00712B85 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				6CAD7FBF299509A400712B85 /* ViewController.swift */,
+				6CAD7FE129950B7400712B85 /* MainScreenModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -78,6 +86,58 @@
 				6CAD7FC9299509A500712B85 /* Info.plist */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		6CAD7FE129950B7400712B85 /* MainScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				6CAD7FF029950B9C00712B85 /* Assembly */,
+				6CAD7FEF29950B9600712B85 /* Factory */,
+				6CAD7FEE29950B8F00712B85 /* Presenter */,
+				6CAD7FED29950B8800712B85 /* Interactor */,
+				6CAD7FEC29950B8300712B85 /* View */,
+			);
+			path = MainScreenModule;
+			sourceTree = "<group>";
+		};
+		6CAD7FEC29950B8300712B85 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6CAD7FE629950B8000712B85 /* MainScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6CAD7FED29950B8800712B85 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6CAD7FE529950B8000712B85 /* MainScreenInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6CAD7FEE29950B8F00712B85 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6CAD7FE329950B8000712B85 /* MainScreenViewController.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6CAD7FEF29950B9600712B85 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				6CAD7FE229950B8000712B85 /* MainScreenFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		6CAD7FF029950B9C00712B85 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				6CAD7FE429950B8000712B85 /* MainScreenAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +210,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CAD7FC0299509A400712B85 /* ViewController.swift in Sources */,
+				6CAD7FE729950B8000712B85 /* MainScreenFactory.swift in Sources */,
+				6CAD7FE929950B8000712B85 /* MainScreenAssembly.swift in Sources */,
+				6CAD7FEB29950B8000712B85 /* MainScreenView.swift in Sources */,
+				6CAD7FE829950B8000712B85 /* MainScreenViewController.swift in Sources */,
 				6CAD7FBC299509A400712B85 /* AppDelegate.swift in Sources */,
 				6CAD7FBE299509A400712B85 /* SceneDelegate.swift in Sources */,
+				6CAD7FEA29950B8000712B85 /* MainScreenInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
