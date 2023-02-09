@@ -16,6 +16,9 @@
 		6CAD7FE929950B8000712B85 /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD7FE429950B8000712B85 /* MainScreenAssembly.swift */; };
 		6CAD7FEA29950B8000712B85 /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD7FE529950B8000712B85 /* MainScreenInteractor.swift */; };
 		6CAD7FEB29950B8000712B85 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD7FE629950B8000712B85 /* MainScreenView.swift */; };
+		6CAD7FF329950BEF00712B85 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD7FF229950BEF00712B85 /* Coordinator.swift */; };
+		6CAD7FF529950C0000712B85 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD7FF429950C0000712B85 /* RootCoordinator.swift */; };
+		6CAD7FF829950C4300712B85 /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD7FF729950C4300712B85 /* MainScreenCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		6CAD7FE429950B8000712B85 /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
 		6CAD7FE529950B8000712B85 /* MainScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
 		6CAD7FE629950B8000712B85 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		6CAD7FF229950BEF00712B85 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		6CAD7FF429950C0000712B85 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		6CAD7FF729950C4300712B85 /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		6CAD7FBA299509A400712B85 /* Surf */ = {
 			isa = PBXGroup;
 			children = (
+				6CAD7FF129950BE400712B85 /* Navigation */,
 				6CAD7FD0299509D600712B85 /* System */,
 				6CAD7FCF299509CD00712B85 /* Modules */,
 			);
@@ -140,6 +147,24 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		6CAD7FF129950BE400712B85 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				6CAD7FF229950BEF00712B85 /* Coordinator.swift */,
+				6CAD7FF429950C0000712B85 /* RootCoordinator.swift */,
+				6CAD7FF629950C3000712B85 /* MainScreenCoordinator */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		6CAD7FF629950C3000712B85 /* MainScreenCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				6CAD7FF729950C4300712B85 /* MainScreenCoordinator.swift */,
+			);
+			path = MainScreenCoordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,12 +235,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CAD7FF329950BEF00712B85 /* Coordinator.swift in Sources */,
+				6CAD7FF829950C4300712B85 /* MainScreenCoordinator.swift in Sources */,
 				6CAD7FE729950B8000712B85 /* MainScreenFactory.swift in Sources */,
 				6CAD7FE929950B8000712B85 /* MainScreenAssembly.swift in Sources */,
 				6CAD7FEB29950B8000712B85 /* MainScreenView.swift in Sources */,
 				6CAD7FE829950B8000712B85 /* MainScreenViewController.swift in Sources */,
 				6CAD7FBC299509A400712B85 /* AppDelegate.swift in Sources */,
 				6CAD7FBE299509A400712B85 /* SceneDelegate.swift in Sources */,
+				6CAD7FF529950C0000712B85 /* RootCoordinator.swift in Sources */,
 				6CAD7FEA29950B8000712B85 /* MainScreenInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

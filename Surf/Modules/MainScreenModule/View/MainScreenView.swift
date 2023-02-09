@@ -47,7 +47,7 @@ private extension MainScreenView {
   func configureLayout() {}
   
   func applyDefaultBehavior() {
-    backgroundColor = .white
+    backgroundColor = .red
   }
 }
 
