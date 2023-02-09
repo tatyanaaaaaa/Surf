@@ -50,11 +50,27 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
 
 // MARK: - MainScreenModuleOutput
 
-extension MainScreenCoordinator: MainScreenModuleOutput {}
+extension MainScreenCoordinator: MainScreenModuleOutput {
+  func submitApplicationAction() {
+    showAlerForUnlockPremiumtWith(title: "Поздравляем!",
+                                  description: "Ваша заявка успешно отправлена!")
+  }
+}
 
 // MARK: - Private
 
-private extension MainScreenCoordinator {}
+private extension MainScreenCoordinator {
+  func showAlerForUnlockPremiumtWith(title: String, description: String) {
+    let appearance = Appearance()
+    let alert = UIAlertController(title: title,
+                                  message: description,
+                                  preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "Закрыть",
+                                  style: .default,
+                                  handler: { _ in }))
+    mainScreenModule?.present(alert, animated: true, completion: nil)
+  }
+}
 
 // MARK: - Appearance
 

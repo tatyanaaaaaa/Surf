@@ -34,7 +34,7 @@ final class ButtonView: UIButton {
   private func applyDefaultBehavior() {
     backgroundColor = surfColor.primaryBlack
     titleLabel?.font = surfFont.primaryMedium16
-    layer.cornerRadius = Appearance().cornerRadius
+    layer.cornerRadius = Appearance().contentHeight / 2
   }
 }
 
@@ -43,6 +43,5 @@ final class ButtonView: UIButton {
 private extension ButtonView {
   struct Appearance {
     let contentHeight: CGFloat = 60
-    let cornerRadius: CGFloat = 52
   }
 }

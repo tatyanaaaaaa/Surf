@@ -8,7 +8,11 @@
 import UIKit
 
 /// События которые отправляем из `текущего модуля` в `другой модуль`
-protocol MainScreenModuleOutput: AnyObject {}
+protocol MainScreenModuleOutput: AnyObject {
+  
+  /// Отправить заявку
+  func submitApplicationAction()
+}
 
 /// События которые отправляем из `другого модуля` в `текущий модуль`
 protocol MainScreenModuleInput {
@@ -60,13 +64,17 @@ final class MainScreenViewController: MainScreenModule {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    factory.createMockData()
   }
 }
 
 // MARK: - MainScreenViewOutput
 
-extension MainScreenViewController: MainScreenViewOutput {}
+extension MainScreenViewController: MainScreenViewOutput {
+  func submitApplicationAction() {
+    moduleOutput?.submitApplicationAction()
+  }
+}
 
 // MARK: - MainScreenInteractorOutput
 
@@ -74,7 +82,11 @@ extension MainScreenViewController: MainScreenInteractorOutput {}
 
 // MARK: - MainScreenFactoryOutput
 
-extension MainScreenViewController: MainScreenFactoryOutput {}
+extension MainScreenViewController: MainScreenFactoryOutput {
+  func didReceive(model: MainScreenModel) {
+    moduleView.updateContentWith(model: model)
+  }
+}
 
 // MARK: - Private
 
